@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pretest - 3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #logo {
+            display: inline-block;
+            margin-left: 44%;
+            width: 150px;
+        }
+
+        #nav {
+            text-align: center;
+            border-top: 2px solid brown;
+            border-bottom: 2px solid brown;
+        }
+
+        #nav ul {
+            display: inline-block;
+        }
+
+        #nav ul li {
+            display: inline;
+            padding: 30px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: blue;
+        }
+
+        #about {
+            font-family: serif;
+            font-size: 40px;
+            color: brown;
+            font-style: italic;
+            font-weight: 600;
+        }
+
+        table {
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #signin table  {
+            height: 500px;
+        }
+
+        #submit {
+            background-color: rgb(148, 148, 226) ;
+            color: white;
+            width: 200px;
+            height: 25px;
+        }
+        #thead {
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <img src="/Images_Set07/logo4.jpg" alt="P3 Logo" id="logo" >
+    </header>
+
+    <div id="nav">
+                <ul>
+                    <li> <a href="/home.html">ABOUT US</a> </li>
+                    <li> <a href="/home.html">MENU</a> </li>
+                    <li> <a href="/reservation.html">RESERVATION</a> </li>
+                    <li> <a href="/home.html" id="about">BonBon</a> </li>
+                    <li> <a href="/home.html">EVENTS</a> </li>
+                    <li> <a href="/home.html">GALLERY</a> </li>
+                    <li> <a href="/home.html">CONTACT</a> </li>
+                </ul>
+    </div>
+    <div id="signin" >
+        <form name="myform" action="" onsubmit="showInfo()">
+            <table>
+
+                <tr>
+                    <th colspan="2" id="thead">Online Booking</th>
+                </tr>
+                <tr>
+                    <td class="input">Full name</td>
+                    <td> <input type="text" name="uname" id="uname" minlength="6" required ></td>
+                </tr>
+                <tr>
+                    <td class="input">Email </td>
+                    <td>
+                        <input type="email" name="mail" id="mail" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="input" ">Phone Number</td>
+                    <td>
+                        <input id="phone" type="phone" pattern="[0-9]{2}-[0-9]{3}-[0-9]{7}" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="input">No. of Persons: </td>
+                    <td>
+                        <select name="qualification" id="quali">
+                            <option value="1">1 person</option>
+                            <option value="2">2 persons</option>
+                            <option value="3">3 persons</option>
+                            <option value="4">4 persons</option>
+                            <option value="5">5 persons</option>
+                            <option value="more">More ...</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Set Date</td>
+                    <td>
+                        <input type="date" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Time Set</td>
+                    <td>
+                        <input type="time" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Comment</td>
+                    <td>
+                        <textarea name="" id="" cols="40" rows="6"></textarea>
+                    </td>
+                </tr>
+                <tr >
+                    <td></td>
+                    <td id="subreset"> 
+                    <input type="submit" id="submit" value="RESERVE A TABLE">
+                    </td>
+                </tr>
+
+
+
+            </table>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function showInfo(){
+            var name = $("#uname").val();
+            var phone = $("#phone").val();
+            alert("This site says... \n" + "Thank you Mr/Ms. " + 
+            name + "\n \n" + 
+            "Your reservation has been recorded by system.\n" + 
+            "We'll contact you soon at the telephone no. " + phone)
+        }
+    </script>
+
+</body>
+</html>
